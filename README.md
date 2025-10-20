@@ -6,3 +6,5 @@
 <h4>First commit - Hello word, attributes, reactivity</h4>
 <h4>Second commit -  made changes in README file making MY readme the default</h4>
 <p>TBH, there must be an option in github to set your default readme in case there are more than one</p>
+
+<h3>Last commit for the day - 21/10/2025 - Data exhausted guysssss... or would have pulled an all nighter</h3>

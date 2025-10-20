@@ -29,13 +29,14 @@
     const fizzbuzz_links = [
         "https://media.giphy.com/media/3o6nUZoNVfceusBKZG/giphy.gif",
         "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZTJkbnp6aXEzMzA2Y2ZqNzR2anFzNHRleHpsYTdsOXBoOHM5OHd1ayZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/3o6nUWPZqiuSRhvuY8/giphy.gif",
-        "https://media.giphy.com/media/xT1R9D0QaX7Mp9qLxC/giphy.gif"
+        "https://media.giphy.com/media/xT1R9D0QaX7Mp9qLxC/giphy.gif",
+        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGxxN2lpZTBsejZ5bzVndGZ5bzIzbWZlN2JnY3NpMW9sMnBlMmhsYSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/PnIpBoEJl7aaoBDxHt/giphy.gif"
     ];
     const messages = {
         msg1:"Fizz because divisible by 3 (wait a sec for gif to load)",
         msg2:"Buzz because divisible by 5 (wait a sec for gif to load)",
         msg3:"FizzBuzz because divisible by both 3 and 5 (wait a sec for gif to load)",
-        msg4:"No gif cuz the number is neither divisible by 3 or 5"
+        msg4:"float in void cuz the number is neither divisible by 3 or 5"
     }
     const fizz_buzz_function = () => {
         fizzbuzz_gif.number++;
@@ -52,14 +53,14 @@
             fizzbuzz_gif.msg = messages.msg1;
         }
         else {
-            fizzbuzz_gif.current_fizzbuzz_gif = "";
+            fizzbuzz_gif.current_fizzbuzz_gif = fizzbuzz_links[3];
             fizzbuzz_gif.msg = messages.msg4;
         }
     }
 </script>
 
 <template>
-    <p>Using the Reactive() and Ref() Functions</p>
+    <p>Using the Reactive() Function</p>
     <p>Count: {{ initial_count.count }}</p>
     <button @click="increment">Increment Count</button>
     <button @click="decrement">Decrement</button>
@@ -68,7 +69,7 @@
     <img :src="gifs.current_gif"/>
     <button @click="toggle">Toggle GIFS</button>
     <p>Fizz Buzz Program using Post Malone GIFS</p>
-    <img :src="fizzbuzz_gif.current_fizzbuzz_gif" class="fb_gif"/>
+    <img :src="fizzbuzz_gif.current_fizzbuzz_gif" class="fb_gif" alt=""/>
     <h3>Current Number is : {{ fizzbuzz_gif.number }}</h3>
     <h4>Your message is : {{fizzbuzz_gif.msg}}</h4>
     <button @click="fizz_buzz_function">Toggle GIFS</button>
